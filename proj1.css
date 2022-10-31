@@ -1,0 +1,144 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-image: url("./background.jpg");
+    position: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100wh;
+}
+#navbar{
+    margin: 20px;
+    padding: 20px;
+    background-color: none;
+    width: 1300px;
+    height: 50px;
+    justify-items: center;
+}
+#list{
+    overflow: auto;
+    display: inline;
+}
+#list #list1{
+    float: left;
+    list-style: none;
+   padding-left: 20px;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+i.fa-solid.fa-dumbbell{
+    font-size: xxx-large;
+    padding-left: 15px;
+}
+#list2 li{
+    float: right;
+    list-style: none;
+}
+button{
+    background-color: black;
+    color: white;
+    border: 0.5px solid rgb(187, 190, 189);
+    border-radius: 5px;
+    margin-top: 13px;
+    padding: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+#list #list3{
+    margin-left: 423px;
+    list-style: none;
+    display: flex;
+}
+#list3 li{
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 13px;
+}
+#list3 li:hover{
+    color: grey;
+    text-decoration: underline;
+}
+button:hover{
+    background-color: rgba(231, 235, 226, 0.671);
+    color: azure;
+}
+/* .................Gonna add blinking effect on list 1.......... */
+/*   --- These animations can be added using animation tag  */
+/*    animation: animation-name  animation-duration  animation-timing-function   animation-delay 
+   animation-iteration-count   animation-fill-mode */
+
+   /* Similarly transition property
+    
+        transition: background-color 1s(duration)  ease-in-out  1s(delay);
+
+        here   background color could be replaced by all(if want to apply transition on all properties)
+   */
+
+   /*     Transform property
+                use it with transition property for smoothness
+            transfrom: skew/rotate (45deg);    or scale(2);
+            transfom:  translateX(23px);
+   */
+#list1:hover{
+    animation: blinker 1s linear infinite;
+}
+@keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+    75%{
+        color: rgb(56, 219, 219);
+    }
+    100%{
+        color: rgb(182, 138, 73);
+    }
+
+  }
+  /*  .............. End of blinking effect ......... */
+#myform{
+    border: 2px solid grey;
+    height: 300px;
+    width: 400px;
+    align-items: center;
+    border-radius: 10px;
+    margin: 50px 0 0 50px;
+    padding-top: 50px;
+    font-weight: bold;
+    font-size: larger;
+}
+#myform input{
+    text-align: center;
+    /* align-text   aligns text in center
+    align-content    align spaces */
+    margin-left: 88px;
+    margin-top: 5px;
+    padding: 2px 25px 2px 25px;
+    border-radius: 5px;
+}
+#myform label{
+    color: white;
+    margin-left: 55px;
+}
+.btn{
+border: 2px solid rgba(32, 102, 32, 0.822);
+background-color: black;
+color: white;
+width: 221px;
+cursor: pointer;
+}
+#formdiv{
+    margin-top: 11%;
+}
+@media screen and (max-width: 850px) {
+    body{
+        background-color: black;
+        background-image: none;
+        height: 100vh;
+        width: 100wh;
+    }
+  }
